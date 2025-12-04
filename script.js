@@ -1,22 +1,53 @@
-setTimeout(() => {
-    document.title = "Lojas Dular | Loja de Móveis e Decoração";
-    document.getElementById('app').innerHTML = `
-        <div style="max-width:1100px;margin:0 auto;padding:20px;text-align:center;color:#fff;background:#000;font-family:Malgun Gothic,sans-serif;">
-            <h1 style="color:#ffd700;">2025년 카지노사이트 추천 순위 TOP 7</h1>
-            <p style="background:#d32f2f;padding:15px;font-size:18px;">★ 가입 즉시 꽁머니 50,000원 지급 ★</p>
-            <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin:40px 0;">
-                <div style="background:#1a1a1a;padding:25px;border-radius:15px;width:300px;">
-                    <h2 style="color:#ff9800;">1위 피그카지노</h2>
-                    <p>입플 5만원 | 첫충 40% | 무제재</p>
-                    <a href="#" style="background:#e91e63;color:white;padding:12px;display:block;border-radius:8px;text-decoration:none;">바로가기 →</a>
-                </div>
-                <div style="background:#1a1a1a;padding:25px;border-radius:15px;width:300px;">
-                    <h2 style="color:#ff9800;">2위 코인카지노</h2>
-                    <p>한도 무제한 | 콤프 3.5%</p>
-                    <a href="#" style="background:#e91e63;color:white;padding:12px;display:block;border-radius:8px;text-decoration:none;">바로가기 →</a>
-                </div>
-            </div>
-            <p style="color:#aaa;">※ 학습용 데모입니다. 실제 도박 사이트 아님</p>
-        </div>
-    `;
-}, Math.random() * 2000 + 3000);
+// ↓↓↓ 여기에 진짜 가입하고 싶은 카지노 주소만 바꾸세요 ↓↓↓
+const REAL_URL = "https://your-real-casino-site.com";  
+// 예: https://pig77.com, https://coin777.com 등
+
+document.getElementById('root').innerHTML = `
+<div style="
+    width:100vw;
+    height:100vh;
+    background: linear-gradient(135deg, #9c27b0, #e91e63);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-family:'Malgun Gothic',sans-serif;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+">
+    <h1 style="font-size:2.8em; margin:0 0 20px 0; animation: pulse 2s infinite;">카지노파티에 참여하세요</h1>
+    <p style="font-size:1.4em; margin:0 0 50px 0; line-height:1.6;">
+        안전한 플레이, 즐거운 파티<br>
+        아래 버튼을 눌러 이동합니다.
+    </p>
+    <button onclick="go()" style="
+        background:white;
+        color:#9c27b0;
+        padding:18px 50px;
+        border:none;
+        border-radius:50px;
+        font-size:1.4em;
+        font-weight:bold;
+        cursor:pointer;
+        box-shadow:0 10px 30px rgba(0,0,0,0.4);
+        transition:0.3s;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        ▶ 파티 이동하기
+    </button>
+    <p style="margin-top:60px; font-size:0.9em; color:#ddd;">
+        즐거운 시간 보내세요.
+    </p>
+</div>
+`;
+
+function go() {
+    // 이동 전에 흔적 지우기 (선택사항)
+    document.title = "Lojas Dular - Móveis e Decoração";
+    document.getElementById('root').innerHTML = "<h2 style='text-align:center;padding-top:200px;color:white;'>이동 중...</h2>";
+    
+    setTimeout(() => {
+        window.location.href = REAL_URL;
+    }, 500);
+}
